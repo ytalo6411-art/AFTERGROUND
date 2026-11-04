@@ -1,0 +1,21 @@
+{
+  "name": "afterground",
+  "version": "1.0.0",
+  "description": "AFTERGROUND — Rebuild What Remains. 2D Underground & Surface Colony Survival, City-Building & Strategy Game.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5173",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0",
+    "vitest": "^3.0.7"
+  }
+}

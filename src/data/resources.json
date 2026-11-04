@@ -1,0 +1,144 @@
+{
+  "resources": [
+    {
+      "id": "food",
+      "name": { "pt-BR": "Comida", "en-US": "Food" },
+      "description": {
+        "pt-BR": "Rações hidropônicas, micoproteínas e grãos sintéticos que alimentam os habitantes.",
+        "en-US": "Hydroponic rations, mycoproteins and synthetic grains that feed citizens."
+      },
+      "color": "#4ade80",
+      "initial": 140,
+      "baseCapacity": 350,
+      "basePrice": 4,
+      "storable": true,
+      "category": "vital"
+    },
+    {
+      "id": "water",
+      "name": { "pt-BR": "Água", "en-US": "Water" },
+      "description": {
+        "pt-BR": "Água purificada essencial para hidratação dos colonos e irrigação agrícola.",
+        "en-US": "Purified water essential for colonist hydration and agricultural irrigation."
+      },
+      "color": "#38bdf8",
+      "initial": 150,
+      "baseCapacity": 350,
+      "basePrice": 3,
+      "storable": true,
+      "category": "vital"
+    },
+    {
+      "id": "energy",
+      "name": { "pt-BR": "Energia", "en-US": "Energy" },
+      "description": {
+        "pt-BR": "Potência elétrica para iluminação subterrânea, suporte de vida e maquinário.",
+        "en-US": "Electrical power for underground lighting, life support and machinery."
+      },
+      "color": "#fbbf24",
+      "initial": 90,
+      "baseCapacity": 250,
+      "basePrice": 5,
+      "storable": true,
+      "category": "utility"
+    },
+    {
+      "id": "wood",
+      "name": { "pt-BR": "Madeira", "en-US": "Wood" },
+      "description": {
+        "pt-BR": "Biomassa estrutural da superfície e fibras fúngicas prensadas para escoramento e obras.",
+        "en-US": "Surface structural biomass and pressed fungal timber for shoring and construction."
+      },
+      "color": "#a16207",
+      "initial": 120,
+      "baseCapacity": 400,
+      "basePrice": 3,
+      "storable": true,
+      "category": "material"
+    },
+    {
+      "id": "stone",
+      "name": { "pt-BR": "Pedra", "en-US": "Stone" },
+      "description": {
+        "pt-BR": "Rocha escavada do subsolo utilizada em fundações, túneis e alto-fornos.",
+        "en-US": "Excavated subterranean rock used in foundations, tunnels and blast furnaces."
+      },
+      "color": "#94a3b8",
+      "initial": 110,
+      "baseCapacity": 450,
+      "basePrice": 2,
+      "storable": true,
+      "category": "material"
+    },
+    {
+      "id": "metal",
+      "name": { "pt-BR": "Metal", "en-US": "Metal" },
+      "description": {
+        "pt-BR": "Ligas de ferro e aço recicladas de ruínas ou fundidas de veios minerais.",
+        "en-US": "Iron and steel alloys recycled from ruins or smelted from mineral veins."
+      },
+      "color": "#cbd5e1",
+      "initial": 65,
+      "baseCapacity": 300,
+      "basePrice": 8,
+      "storable": true,
+      "category": "material"
+    },
+    {
+      "id": "fuel",
+      "name": { "pt-BR": "Combustível", "en-US": "Fuel" },
+      "description": {
+        "pt-BR": "Hidrocarbonetos refinados e biocombustível para geradores, fundições e expedições.",
+        "en-US": "Refined hydrocarbons and biofuel for generators, foundries and expeditions."
+      },
+      "color": "#f97316",
+      "initial": 55,
+      "baseCapacity": 250,
+      "basePrice": 10,
+      "storable": true,
+      "category": "industrial"
+    },
+    {
+      "id": "money",
+      "name": { "pt-BR": "Créditos", "en-US": "Credits" },
+      "description": {
+        "pt-BR": "Moeda de troca padronizada entre enclaves sobreviventes e caravanas livres.",
+        "en-US": "Standardized currency traded between survivor enclaves and free caravans."
+      },
+      "color": "#eab308",
+      "initial": 350,
+      "baseCapacity": 99999,
+      "basePrice": 1,
+      "storable": false,
+      "category": "economy"
+    },
+    {
+      "id": "science",
+      "name": { "pt-BR": "Ciência", "en-US": "Science" },
+      "description": {
+        "pt-BR": "Dados técnicos recuperados e pesquisa aplicada para desbloquear novas tecnologias.",
+        "en-US": "Recovered technical data and applied research to unlock new technologies."
+      },
+      "color": "#a855f7",
+      "initial": 25,
+      "baseCapacity": 99999,
+      "basePrice": 15,
+      "storable": false,
+      "category": "knowledge"
+    },
+    {
+      "id": "parts",
+      "name": { "pt-BR": "Peças Ind.", "en-US": "Ind. Parts" },
+      "description": {
+        "pt-BR": "Componentes mecânicos e circuitos de precisão para estruturas avançadas e manutenção.",
+        "en-US": "Mechanical components and precision circuits for advanced structures and maintenance."
+      },
+      "color": "#2dd4bf",
+      "initial": 25,
+      "baseCapacity": 200,
+      "basePrice": 18,
+      "storable": true,
+      "category": "industrial"
+    }
+  ]
+}

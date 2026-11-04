@@ -1,0 +1,229 @@
+{
+  "events": [
+    {
+      "id": "refugee_convoy",
+      "type": "narrative",
+      "minDay": 2,
+      "title": {
+        "pt-BR": "Sinal de Rádio: Sobreviventes do Setor-9",
+        "en-US": "Radio Signal: Sector-9 Survivors"
+      },
+      "description": {
+        "pt-BR": "Um grupo exausto de sobreviventes captou o farol da nossa colônia. Eles trazem ferramentas básicas, mas nossas reservas de água e comida serão pressionadas.",
+        "en-US": "An exhausted group of survivors picked up our colony beacon. They carry basic tools, but our water and food reserves will be strained."
+      },
+      "choices": [
+        {
+          "id": "welcome_all",
+          "label": {
+            "pt-BR": "Abrir as comportas e acolher todos (+3 Cidadãos, +25 Metal, -25 Comida, -25 Água)",
+            "en-US": "Open the airlocks and welcome all (+3 Citizens, +25 Metal, -25 Food, -25 Water)"
+          },
+          "effects": {
+            "addCitizens": 3,
+            "resources": { "metal": 25, "food": -25, "water": -25 },
+            "happiness": 5
+          }
+        },
+        {
+          "id": "trade_supplies",
+          "label": {
+            "pt-BR": "Fornecer suprimentos médicos e negociar mapas (+20 Ciência, +60 Créditos, -15 Água)",
+            "en-US": "Provide medical supplies and trade maps (+20 Science, +60 Credits, -15 Water)"
+          },
+          "effects": {
+            "resources": { "science": 20, "money": 60, "water": -15 }
+          }
+        }
+      ]
+    },
+    {
+      "id": "acid_storm",
+      "type": "hazard",
+      "minDay": 3,
+      "title": {
+        "pt-BR": "Tempestade de Cinzas Ácidas na Superfície",
+        "en-US": "Surface Acid Ash Storm"
+      },
+      "description": {
+        "pt-BR": "Nuvens densas carregadas de enxofre cobrem a superfície, reduzindo a geração solar e exigindo filtragem extra.",
+        "en-US": "Dense sulfur clouds cover the surface, reducing solar output and requiring extra filtration."
+      },
+      "weather": "acid_storm",
+      "durationSec": 45,
+      "choices": [
+        {
+          "id": "overclock_filters",
+          "label": {
+            "pt-BR": "Reforçar filtros de ar e vedação (-20 Energia, protege a saúde dos colonos)",
+            "en-US": "Boost air filters and seals (-20 Energy, protects colonist health)"
+          },
+          "effects": {
+            "resources": { "energy": -20 },
+            "happiness": 3
+          }
+        },
+        {
+          "id": "endure_storm",
+          "label": {
+            "pt-BR": "Economizar energia e suportar o temporal (-6 Saúde média, -5 Felicidade)",
+            "en-US": "Save energy and weather the storm (-6 avg Health, -5 Happiness)"
+          },
+          "effects": {
+            "health": -6,
+            "happiness": -5
+          }
+        }
+      ]
+    },
+    {
+      "id": "subterranean_vault",
+      "type": "discovery",
+      "minDay": 4,
+      "title": {
+        "pt-BR": "Cápsula de Dados de 2189 Descoberta",
+        "en-US": "2189 Data Capsule Discovered"
+      },
+      "description": {
+        "pt-BR": "Durante as escavações, uma equipe encontrou um cofre hermético da antiga Iniciativa Aegis contendo componentes intactos e registros históricos.",
+        "en-US": "During excavations, a crew found a sealed Aegis Initiative vault containing intact components and historical logs."
+      },
+      "choices": [
+        {
+          "id": "extract_tech",
+          "label": {
+            "pt-BR": "Estudar os bancos de dados no laboratório (+35 Ciência, +12 Peças Ind.)",
+            "en-US": "Study the databases in the lab (+35 Science, +12 Ind. Parts)"
+          },
+          "effects": {
+            "resources": { "science": 35, "parts": 12 },
+            "unlockLore": "log_2189_aegis"
+          }
+        },
+        {
+          "id": "salvage_materials",
+          "label": {
+            "pt-BR": "Desmontar o cofre para expansão imediata (+45 Metal, +30 Combustível, +90 Créditos)",
+            "en-US": "Disassemble the vault for immediate expansion (+45 Metal, +30 Fuel, +90 Credits)"
+          },
+          "effects": {
+            "resources": { "metal": 45, "fuel": 30, "money": 90 }
+          }
+        }
+      ]
+    },
+    {
+      "id": "aquifer_drought",
+      "type": "hazard",
+      "minDay": 5,
+      "title": {
+        "pt-BR": "Estiagem e Queda de Pressão no Aquífero",
+        "en-US": "Aquifer Pressure Drop & Drought"
+      },
+      "description": {
+        "pt-BR": "Um deslocamento tectônico reduziu temporariamente o fluxo dos lençóis freáticos rasos.",
+        "en-US": "A tectonic shift temporarily reduced flow in shallow groundwater aquifers."
+      },
+      "weather": "heatwave",
+      "durationSec": 40,
+      "choices": [
+        {
+          "id": "deep_pumping",
+          "label": {
+            "pt-BR": "Injetar pressão extra nas bombas (-25 Combustível, +40 Água recuperada)",
+            "en-US": "Inject extra pressure into pumps (-25 Fuel, +40 Water recovered)"
+          },
+          "effects": {
+            "resources": { "fuel": -25, "water": 40 }
+          }
+        },
+        {
+          "id": "ration_water",
+          "label": {
+            "pt-BR": "Decretar racionamento temporário (-20 Água, -6 Felicidade)",
+            "en-US": "Decree temporary rationing (-20 Water, -6 Happiness)"
+          },
+          "effects": {
+            "resources": { "water": -20 },
+            "happiness": -6
+          }
+        }
+      ]
+    },
+    {
+      "id": "spore_outbreak",
+      "type": "hazard",
+      "minDay": 6,
+      "title": {
+        "pt-BR": "Bolsão de Esporos Bioluminescentes",
+        "en-US": "Bioluminescent Spore Pocket"
+      },
+      "description": {
+        "pt-BR": "Uma fenda úmida liberou esporos subterrâneos. Alguns colonos apresentam febre leve, mas a flora também pode ser estudada.",
+        "en-US": "A damp fissure released subterranean spores. Some colonists show mild fever, though the flora can also be studied."
+      },
+      "choices": [
+        {
+          "id": "medical_quarantine",
+          "label": {
+            "pt-BR": "Aplicar protocolo médico e sintetizar amostras (-25 Água, +25 Ciência, +6 Saúde)",
+            "en-US": "Apply medical protocol and synthesize samples (-25 Water, +25 Science, +6 Health)"
+          },
+          "effects": {
+            "resources": { "water": -25, "science": 25 },
+            "health": 6
+          }
+        },
+        {
+          "id": "harvest_spores",
+          "label": {
+            "pt-BR": "Colher biomassa rapidamente (+45 Comida, +30 Madeira, -8 Saúde)",
+            "en-US": "Harvest biomass quickly (+45 Food, +30 Wood, -8 Health)"
+          },
+          "effects": {
+            "resources": { "food": 45, "wood": 30 },
+            "health": -8
+          }
+        }
+      ]
+    },
+    {
+      "id": "raider_scouts",
+      "type": "threat",
+      "minDay": 7,
+      "title": {
+        "pt-BR": "Incursão de Saqueadores da Cinza",
+        "en-US": "Ash Raider Incursion"
+      },
+      "description": {
+        "pt-BR": "Batedores armados da superfície exigem tributo em suprimentos ou ameaçam sabotar os coletores externos.",
+        "en-US": "Armed surface scouts demand supply tribute or threaten to sabotage external collectors."
+      },
+      "choices": [
+        {
+          "id": "defend_colony",
+          "label": {
+            "pt-BR": "Mobilizar guardas e defesas da colônia (usa Defesa da colônia; +80 Créditos e +15 Metal se vencer)",
+            "en-US": "Mobilize guards and colony defenses (uses Colony Defense; +80 Credits and +15 Metal if victorious)"
+          },
+          "effects": {
+            "defenseCheck": 20,
+            "resources": { "money": 80, "metal": 15 },
+            "happiness": 6
+          }
+        },
+        {
+          "id": "pay_tribute",
+          "label": {
+            "pt-BR": "Negociar passagem segura (-30 Comida, -60 Créditos)",
+            "en-US": "Negotiate safe passage (-30 Food, -60 Credits)"
+          },
+          "effects": {
+            "resources": { "food": -30, "money": -60 },
+            "happiness": -3
+          }
+        }
+      ]
+    }
+  ]
+}

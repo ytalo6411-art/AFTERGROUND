@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#090d16" />
+    <meta
+      name="description"
+      content="AFTERGROUND — Rebuild What Remains. Jogo 2D de construção e gerenciamento de colônia subterrânea e de superfície."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/assets/logo/favicon.png" />
+    <title>AFTERGROUND — Rebuild What Remains</title>
+  </head>
+  <body>
+    <!-- Renderizador Principal 2D Canvas -->
+    <canvas id="game-canvas" aria-label="Mundo 2D do AFTERGROUND"></canvas>
+
+    <!-- Notificações Toast -->
+    <div id="ag-toast-container"></div>
+
+    <!-- Barra Superior de Recursos e Simulação -->
+    <header id="ag-topbar">
+      <div class="ag-brand-mini" id="btn-open-title" title="Menu Principal AFTERGROUND">
+        <img src="/assets/logo/logo-horizontal.svg" alt="AFTERGROUND" />
+      </div>
+
+      <div id="ag-resource-strip"></div>
+
+      <div class="ag-status-cluster">
+        <div class="ag-stat-chip" title="População Atual / Capacidade de Moradia">
+          <span>👥</span>
+          <strong id="hud-pop-val">8 / 10</strong>
+        </div>
+        <div class="ag-stat-chip" title="Felicidade Média da Colônia">
+          <span>😊</span>
+          <strong id="hud-happy-val">78%</strong>
+        </div>
+        <div class="ag-stat-chip" id="hud-date-val">☀ Dia 1, Ano 2241 · Era 1</div>
+
+        <div class="ag-speed-group" role="group" aria-label="Velocidade da Simulação">
+          <button class="ag-speed-btn" data-speed="0" title="Pausar (Espaço)">⏸</button>
+          <button class="ag-speed-btn active" data-speed="1" title="Velocidade 1x (Tecla 1)">1x</button>
+          <button class="ag-speed-btn" data-speed="2" title="Velocidade 2x (Tecla 2)">2x</button>
+          <button class="ag-speed-btn" data-speed="4" title="Velocidade 4x (Tecla 3)">4x</button>
+        </div>
+
+        <button id="ag-sync-indicator" class="ag-sync-pill offline" title="Status de Sincronização Cloud / Offline">
+          💾 Local (IndexedDB)
+        </button>
+      </div>
+    </header>
+
+    <!-- Painel Lateral de Ferramentas e Sistemas -->
+    <nav id="ag-left-dock" aria-label="Sistemas da Colônia">
+      <button class="ag-dock-btn" id="dock-btn-build">🔨 Construir</button>
+      <button class="ag-dock-btn" id="dock-btn-excavate">⛏ Escavar (E)</button>
+      <button class="ag-dock-btn" id="dock-btn-infra">🪜 Infraestrutura</button>
+      <button class="ag-dock-btn" id="dock-btn-research">🔬 Pesquisa</button>
+      <button class="ag-dock-btn" id="dock-btn-exploration">🧭 Expedições</button>
+      <button class="ag-dock-btn" id="dock-btn-economy">📊 Economia</button>
+      <button class="ag-dock-btn" id="dock-btn-citizens">👥 Cidadãos</button>
+      <button class="ag-dock-btn" id="dock-btn-missions">🏆 Objetivos</button>
+      <button class="ag-dock-btn" id="dock-btn-demolish">🗑 Demolir (X)</button>
+    </nav>
+
+    <!-- Gaveta de Construções por Categoria -->
+    <aside id="ag-build-drawer" class="hidden"></aside>
+
+    <!-- Inspetor Contextual (Construção ou Cidadão selecionado) -->
+    <aside id="ag-inspector-container"></aside>
+
+    <!-- Barra de Status da Ferramenta Ativa -->
+    <div id="ag-tool-banner" class="hidden">
+      <span id="ag-tool-banner-text">Modo ativo</span>
+      <button class="ag-btn ag-btn-secondary" id="btn-cancel-tool" style="padding:4px 10px;font-size:11px;">
+        Cancelar (ESC)
+      </button>
+    </div>
+
+    <!-- Controles de Câmera, Salvamento Rápido e Telemetria -->
+    <div id="ag-bottom-right">
+      <div id="ag-perf-pill">60 FPS · Sim 0.2ms · 12 Chunks</div>
+      <div class="ag-Quick-bar">
+        <button class="ag-btn ag-btn-secondary" id="btn-cam-home" title="Centralizar no Núcleo de Comando">🎯 Base</button>
+        <button class="ag-btn ag-btn-secondary" id="btn-cam-zoom-in" title="Aproximar Zoom">🔍+</button>
+        <button class="ag-btn ag-btn-secondary" id="btn-cam-zoom-out" title="Afastar Zoom">🔍-</button>
+        <button class="ag-btn ag-btn-primary" id="btn-quick-save" title="Salvar Progresso Agora">💾 Salvar</button>
+        <button class="ag-btn ag-btn-secondary" id="btn-open-saves" title="Mundos & Slots de Save">📂 Mundos</button>
+        <button class="ag-btn ag-btn-secondary" id="btn-open-auth" title="Conta Google / Supabase Cloud">☁ Conta</button>
+        <button class="ag-btn ag-btn-secondary" id="btn-open-settings" title="Configurações">⚙</button>
+        <button class="ag-btn ag-btn-secondary" id="btn-open-help" title="Tutorial e Atalhos">?</button>
+      </div>
+    </div>
+
+    <!-- Tela de Abertura / Menu Inicial AFTERGROUND -->
+    <section id="ag-title-screen">
+      <div class="ag-title-card">
+        <img src="/assets/logo/logo-main.svg" alt="AFTERGROUND — Rebuild What Remains" class="ag-title-logo" />
+        <div class="ag-title-story">
+          <strong>ANO 2241 A.E. — 52 ANOS APÓS O COLAPSO DE 2189</strong><br />
+          Após décadas sobrevivendo em galerias subterrâneas isoladas, uma nova geração abre as comportas para reconstruir a civilização. Escave os estratos profundos, estabeleça cadeias industriais, cuide de cada cidadão e recupere o futuro da humanidade.
+        </div>
+        <div class="ag-title-menu">
+          <button class="ag-btn ag-btn-primary ag-btn-hero" id="btn-title-continue">
+            ▶ Continuar Colônia
+          </button>
+          <button class="ag-btn ag-btn-secondary" id="btn-title-new">🌍 Novo Mundo Procedural</button>
+          <button class="ag-btn ag-btn-secondary" id="btn-title-saves">📂 Carregar / Mundos Salvos</button>
+          <button class="ag-btn ag-btn-secondary" id="btn-title-auth">☁ Entrar com Google / Conta Cloud</button>
+          <button class="ag-btn ag-btn-secondary" id="btn-title-settings">⚙ Configurações & Desempenho</button>
+          <button class="ag-btn ag-btn-secondary" id="btn-title-credits" style="grid-column: span 2;">
+            📖 Manual do Comandante, Conquistas & Lore de 2189
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Janela Modal Dinâmica -->
+    <div id="ag-modal-backdrop" class="hidden">
+      <div class="ag-modal-window" role="dialog" aria-modal="true">
+        <div class="ag-modal-header">
+          <h3 id="ag-modal-title">Painel</h3>
+          <button class="ag-icon-btn" id="ag-modal-close" title="Fechar (ESC)">✕</button>
+        </div>
+        <div class="ag-modal-body" id="ag-modal-body"></div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

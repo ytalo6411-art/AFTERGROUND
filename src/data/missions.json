@@ -1,0 +1,306 @@
+{
+  "missions": [
+    {
+      "id": "mission_first_shelter",
+      "era": 1,
+      "title": { "pt-BR": "Primeiros Teto e Escadas", "en-US": "First Roof & Ladders" },
+      "description": {
+        "pt-BR": "Construa pelo menos 1 Abrigo Cápsula para alojar seus colonos iniciais.",
+        "en-US": "Build at least 1 Pod Shelter to house your initial colonists."
+      },
+      "goal": { "type": "building_count", "buildingId": "pod_shelter", "target": 1 },
+      "reward": { "wood": 30, "stone": 30, "science": 10 }
+    },
+    {
+      "id": "mission_water_food",
+      "era": 1,
+      "title": { "pt-BR": "Sustento Vital", "en-US": "Vital Sustenance" },
+      "description": {
+        "pt-BR": "Garanta produção de água e comida construindo 1 Coletor d'Água e 1 Cultivo de Fungos.",
+        "en-US": "Secure water and food production by building 1 Water Extractor and 1 Myco-Farm."
+      },
+      "goal": { "type": "buildings_combo", "targets": { "water_extractor": 1, "myco_farm": 1 } },
+      "reward": { "food": 50, "water": 50, "money": 80 }
+    },
+    {
+      "id": "mission_excavate_subsoil",
+      "era": 1,
+      "title": { "pt-BR": "Abrindo o Subsolo", "en-US": "Opening the Subsoil" },
+      "description": {
+        "pt-BR": "Escave pelo menos 12 blocos subterrâneos para expandir as galerias da colônia.",
+        "en-US": "Excavate at least 12 underground tiles to expand the colony galleries."
+      },
+      "goal": { "type": "excavated_tiles", "target": 12 },
+      "reward": { "metal": 25, "fuel": 20, "science": 15 }
+    },
+    {
+      "id": "mission_power_and_science",
+      "era": 1,
+      "title": { "pt-BR": "Centelha do Conhecimento", "en-US": "Spark of Knowledge" },
+      "description": {
+        "pt-BR": "Construa 1 Gerador Termo-Combustível e 1 Laboratório de Pesquisa, e conclua sua primeira Tecnologia.",
+        "en-US": "Build 1 Fuel Generator and 1 Research Lab, and complete your first Technology."
+      },
+      "goal": { "type": "tech_count", "target": 1 },
+      "reward": { "science": 35, "parts": 10, "money": 100 }
+    },
+    {
+      "id": "mission_era2_metallurgy",
+      "era": 2,
+      "title": { "pt-BR": "Forja da Reconstrução", "en-US": "Forge of Reconstruction" },
+      "description": {
+        "pt-BR": "Alcance 12 habitantes e construa um Alto-Forno de Fundição ou uma Perfuratriz de Mineração.",
+        "en-US": "Reach 12 citizens and build a Smelting Foundry or a Mining Rig."
+      },
+      "goal": { "type": "population", "target": 12 },
+      "reward": { "metal": 45, "stone": 60, "money": 140 }
+    },
+    {
+      "id": "mission_first_expedition",
+      "era": 2,
+      "title": { "pt-BR": "Olhos Além do Bunker", "en-US": "Eyes Beyond the Bunker" },
+      "description": {
+        "pt-BR": "Envie e conclua 1 Expedição de Exploração para recuperar tecnologias perdidas.",
+        "en-US": "Launch and complete 1 Exploration Expedition to recover lost technologies."
+      },
+      "goal": { "type": "expeditions_completed", "target": 1 },
+      "reward": { "science": 50, "parts": 18, "fuel": 35 }
+    },
+    {
+      "id": "mission_industrial_autonomy",
+      "era": 3,
+      "title": { "pt-BR": "Indústria Autossuficiente", "en-US": "Self-Sufficient Industry" },
+      "description": {
+        "pt-BR": "Pesquise 6 tecnologias e construa uma Fábrica de Peças Industriais.",
+        "en-US": "Research 6 technologies and build an Industrial Parts Fabricator."
+      },
+      "goal": { "type": "tech_count", "target": 6 },
+      "reward": { "parts": 30, "metal": 60, "money": 250 }
+    },
+    {
+      "id": "mission_thriving_metropolis",
+      "era": 4,
+      "title": { "pt-BR": "Cidadela Subterrânea", "en-US": "Subterranean Citadel" },
+      "description": {
+        "pt-BR": "Alcance 25 habitantes com Felicidade acima de 70% e construa uma Usina Geotérmica ou Instituto de Dados.",
+        "en-US": "Reach 25 citizens with Happiness above 70% and build a Geothermal Plant or Data Institute."
+      },
+      "goal": { "type": "population", "target": 25 },
+      "reward": { "science": 120, "parts": 40, "money": 400 }
+    },
+    {
+      "id": "mission_new_civilization",
+      "era": 5,
+      "title": { "pt-BR": "O Renascimento do AFTERGROUND", "en-US": "The AFTERGROUND Renaissance" },
+      "description": {
+        "pt-BR": "Pesquise o Projeto Renascimento da Superfície ou alcance 50 habitantes em uma civilização autossuficiente.",
+        "en-US": "Research Project Surface Renaissance or reach 50 citizens in a self-sufficient civilization."
+      },
+      "goal": { "type": "tech_unlocked", "techId": "surface_renaissance" },
+      "reward": { "money": 1000, "science": 250, "parts": 80 }
+    }
+  ],
+  "achievements": [
+    {
+      "id": "ach_first_dig",
+      "title": { "pt-BR": "Rompendo a Crosta", "en-US": "Breaking the Crust" },
+      "description": { "pt-BR": "Escave seu primeiro bloco subterrâneo.", "en-US": "Excavate your first underground tile." },
+      "icon": "pickaxe"
+    },
+    {
+      "id": "ach_deep_miner",
+      "title": { "pt-BR": "Engenheiro de Túneis", "en-US": "Tunnel Engineer" },
+      "description": { "pt-BR": "Escave 50 blocos de terreno na mesma colônia.", "en-US": "Excavate 50 terrain tiles in a single colony." },
+      "icon": "layers"
+    },
+    {
+      "id": "ach_builder_5",
+      "title": { "pt-BR": "Fundação Sólida", "en-US": "Solid Foundation" },
+      "description": { "pt-BR": "Construa 5 edifícios funcionais na colônia.", "en-US": "Construct 5 functional buildings in the colony." },
+      "icon": "home"
+    },
+    {
+      "id": "ach_builder_15",
+      "title": { "pt-BR": "Arquitetura Subterrânea", "en-US": "Subterranean Architecture" },
+      "description": { "pt-BR": "Construa 15 edifícios na colônia.", "en-US": "Construct 15 buildings in the colony." },
+      "icon": "factory"
+    },
+    {
+      "id": "ach_pop_15",
+      "title": { "pt-BR": "Comunidade Viva", "en-US": "Living Community" },
+      "description": { "pt-BR": "Alcance uma população de 15 cidadãos.", "en-US": "Reach a population of 15 citizens." },
+      "icon": "users"
+    },
+    {
+      "id": "ach_pop_30",
+      "title": { "pt-BR": "Enclave Próspero", "en-US": "Prosperous Enclave" },
+      "description": { "pt-BR": "Alcance uma população de 30 cidadãos.", "en-US": "Reach a population of 30 citizens." },
+      "icon": "users"
+    },
+    {
+      "id": "ach_pop_60",
+      "title": { "pt-BR": "Metrópole Subterrânea", "en-US": "Subterranean Metropolis" },
+      "description": { "pt-BR": "Alcance uma população de 60 cidadãos.", "en-US": "Reach a population of 60 citizens." },
+      "icon": "crown"
+    },
+    {
+      "id": "ach_first_tech",
+      "title": { "pt-BR": "Memória Recuperada", "en-US": "Recovered Memory" },
+      "description": { "pt-BR": "Conclua sua primeira pesquisa tecnológica.", "en-US": "Complete your first technological research." },
+      "icon": "atom"
+    },
+    {
+      "id": "ach_era_3",
+      "title": { "pt-BR": "Revolução Subterrânea", "en-US": "Subterranean Revolution" },
+      "description": { "pt-BR": "Desbloqueie uma tecnologia da Era III (Industrialização).", "en-US": "Unlock an Era III (Industrialization) technology." },
+      "icon": "cog"
+    },
+    {
+      "id": "ach_era_5",
+      "title": { "pt-BR": "Arquiteto do Futuro", "en-US": "Architect of the Future" },
+      "description": { "pt-BR": "Alcance a Era V (Nova Civilização).", "en-US": "Reach Era V (New Civilization)." },
+      "icon": "star"
+    },
+    {
+      "id": "ach_first_expedition",
+      "title": { "pt-BR": "Pioneiro da Superfície", "en-US": "Surface Pioneer" },
+      "description": { "pt-BR": "Conclua com sucesso uma expedição ao mundo exterior.", "en-US": "Successfully complete an expedition to the outside world." },
+      "icon": "compass"
+    },
+    {
+      "id": "ach_wealthy",
+      "title": { "pt-BR": "Reserva Mercante", "en-US": "Merchant Reserve" },
+      "description": { "pt-BR": "Acumule 1.000 Créditos na economia da colônia.", "en-US": "Accumulate 1,000 Credits in the colony economy." },
+      "icon": "coins"
+    }
+  ],
+  "expeditionSites": [
+    {
+      "id": "site_ash_valley",
+      "name": { "pt-BR": "Vale das Cinzas & Comboio Soterrado", "en-US": "Ash Valley & Buried Convoy" },
+      "description": {
+        "pt-BR": "Um antigo comboio logístico de 2189 parcialmente preservado sob dunas vulcânicas.",
+        "en-US": "An old 2189 logistics convoy partially preserved beneath volcanic dunes."
+      },
+      "distanceKm": 14,
+      "durationSec": 22,
+      "minTeam": 2,
+      "supplyCost": { "food": 16, "water": 16, "fuel": 10 },
+      "baseSuccess": 0.88,
+      "riskLevel": "Baixo / Low",
+      "rewards": { "metal": 35, "fuel": 28, "parts": 8, "science": 18 },
+      "loreId": "lore_convoy_2189"
+    },
+    {
+      "id": "site_metro_sector4",
+      "name": { "pt-BR": "Estação Subterrânea Setor-4", "en-US": "Sector-4 Subterranean Station" },
+      "description": {
+        "pt-BR": "Terminal ferroviário subterrâneo onde famílias sobreviveram às primeiras décadas após a Ruptura.",
+        "en-US": "Underground rail terminal where families survived the first decades after the Rupture."
+      },
+      "distanceKm": 28,
+      "durationSec": 30,
+      "minTeam": 2,
+      "supplyCost": { "food": 24, "water": 24, "fuel": 16 },
+      "baseSuccess": 0.82,
+      "riskLevel": "Médio / Medium",
+      "rewards": { "citizens": 2, "food": 40, "metal": 30, "science": 28, "money": 90 },
+      "loreId": "lore_metro_refuge"
+    },
+    {
+      "id": "site_hydro_dam",
+      "name": { "pt-BR": "Represa Hidrelétrica Boreal", "en-US": "Boreal Hydroelectric Dam" },
+      "description": {
+        "pt-BR": "Turbinas gigantescas e reservatórios de água doce protegidos por paredes de concreto ciclópico.",
+        "en-US": "Giant turbines and freshwater reservoirs protected by cyclopean concrete walls."
+      },
+      "distanceKm": 45,
+      "durationSec": 38,
+      "minTeam": 3,
+      "supplyCost": { "food": 32, "water": 30, "fuel": 24 },
+      "baseSuccess": 0.76,
+      "riskLevel": "Médio / Medium",
+      "rewards": { "water": 90, "parts": 18, "metal": 45, "science": 40 },
+      "loreId": "lore_hydro_collapse"
+    },
+    {
+      "id": "site_aegis_cryo",
+      "name": { "pt-BR": "Laboratório Criogênico Aegis-01", "en-US": "Aegis-01 Cryogenic Laboratory" },
+      "description": {
+        "pt-BR": "Complexo científico de alta segurança contendo bancos de sementes, servidores neurais e especialistas em estase.",
+        "en-US": "High-security scientific complex containing seed banks, neural servers and specialists in stasis."
+      },
+      "distanceKm": 72,
+      "durationSec": 48,
+      "minTeam": 3,
+      "supplyCost": { "food": 42, "water": 42, "fuel": 34 },
+      "baseSuccess": 0.72,
+      "riskLevel": "Alto / High",
+      "rewards": { "citizens": 3, "science": 75, "parts": 28, "money": 180 },
+      "loreId": "lore_aegis_directive"
+    },
+    {
+      "id": "site_orbital_spire",
+      "name": { "pt-BR": "Torre de Telemetria Orbital", "en-US": "Orbital Telemetry Spire" },
+      "description": {
+        "pt-BR": "A última antena de comunicação com a rede de satélites climáticos da Terra.",
+        "en-US": "The last communication array linked to Earth's climate satellite network."
+      },
+      "distanceKm": 110,
+      "durationSec": 58,
+      "minTeam": 4,
+      "supplyCost": { "food": 55, "water": 55, "fuel": 45 },
+      "baseSuccess": 0.68,
+      "riskLevel": "Extremo / Extreme",
+      "rewards": { "science": 120, "parts": 42, "metal": 70, "money": 320 },
+      "loreId": "lore_orbital_hope"
+    }
+  ],
+  "loreEntries": [
+    {
+      "id": "lore_intro_2189",
+      "year": "2189 — O Ano da Ruptura",
+      "title": { "pt-BR": "Diretriz Zero: A Descida", "en-US": "Directive Zero: The Descent" },
+      "text": {
+        "pt-BR": "Quando as tempestades hiper-térmicas de 2189 romperam as malhas costeiras e os conflitos pelos últimos aquíferos silenciaram as metrópoles, restaram apenas os complexos subterrâneos da Iniciativa Aegis. Durante 52 anos apenas sobrevivemos no escuro. Hoje, em 2241, abrimos as comportas para reconstruir o que restou.",
+        "en-US": "When the hyper-thermal storms of 2189 shattered coastal grids and resource wars silenced the metropolises, only the subterranean complexes of the Aegis Initiative remained. For 52 years we merely survived in the dark. Today, in 2241, we open the airlocks to rebuild what remains."
+      }
+    },
+    {
+      "id": "lore_convoy_2189",
+      "year": "2189 — Outubro",
+      "title": { "pt-BR": "Diário do Capitão V. Kaelen (Comboio 14)", "en-US": "Log of Capt. V. Kaelen (Convoy 14)" },
+      "text": {
+        "pt-BR": "As turbinas dos caminhões pararam a 14 km do Bunker. A cinza é tão fina que atravessa os filtros comuns, mas conseguimos selar os contêineres de ligas metálicas e sementes. Se alguém do subsolo encontrar esta caixa-preta no futuro: as máquinas ainda funcionam. Usem-nas para erguer algo melhor.",
+        "en-US": "The truck turbines stalled 14 km from the Bunker. The ash is so fine it bypasses standard filters, but we sealed the alloy and seed containers. If anyone from underground finds this black box in the future: the machines still work. Use them to build something better."
+      }
+    },
+    {
+      "id": "lore_metro_refuge",
+      "year": "2204 — O Silêncio da Superfície",
+      "title": { "pt-BR": "Crônicas da Estação Setor-4", "en-US": "Chronicles of Sector-4 Station" },
+      "text": {
+        "pt-BR": "Nossos filhos nunca viram o céu azul, mas aprenderam a cultivar fungos bioluminescentes nos trilhos abandonados e a reciclar cada parafuso de aço. Não somos relíquias do velho mundo; somos os fundadores do próximo.",
+        "en-US": "Our children never saw a blue sky, yet they learned to cultivate bioluminescent fungi along abandoned tracks and recycle every steel bolt. We are not relics of the old world; we are the founders of the next."
+      }
+    },
+    {
+      "id": "lore_aegis_directive",
+      "year": "2191 — Arquivo Aegis-01",
+      "title": { "pt-BR": "Projeto Renascimento: Fase Subterrânea", "en-US": "Project Renaissance: Subterranean Phase" },
+      "text": {
+        "pt-BR": "O subsolo nunca foi projetado como túmulo, mas como crisálida. A energia geotérmica profunda fornecerá a potência necessária para quando a superfície voltar a respirar.",
+        "en-US": "The underground was never designed as a tomb, but as a chrysalis. Deep geothermal energy will provide the power needed for when the surface breathes again."
+      }
+    },
+    {
+      "id": "lore_orbital_hope",
+      "year": "2241 — Telemetria Orbital Ativa",
+      "title": { "pt-BR": "Transmissão do Satélite Helios-VII", "en-US": "Transmission from Satellite Helios-VII" },
+      "text": {
+        "pt-BR": "Análise espectral confirmada: os níveis de toxicidade atmosférica caíram 68% desde 2189. Pontos de luz térmica detectados em múltiplos setores subterrâneos. A humanidade está voltando à superfície.",
+        "en-US": "Spectral analysis confirmed: atmospheric toxicity levels have dropped 68% since 2189. Thermal light points detected across multiple subterranean sectors. Humanity is returning to the surface."
+      }
+    }
+  ]
+}

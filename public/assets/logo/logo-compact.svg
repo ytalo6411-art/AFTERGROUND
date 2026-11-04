@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 56" width="180" height="56" role="img" aria-label="AFTERGROUND Compact Badge">
+  <rect x="2" y="2" width="176" height="52" rx="8" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+  <polygon points="28,10 46,20 46,38 28,48 10,38 10,20" fill="#1e293b" stroke="#4ade80" stroke-width="1.8"/>
+  <polygon points="24,28 24,15 28,12 32,15 32,28" fill="#e2e8f0"/>
+  <rect x="12" y="28" width="32" height="3" fill="#4ade80"/>
+  <polygon points="12,31 44,31 44,38 28,46 12,38" fill="#78350f"/>
+  <rect x="26" y="28" width="4" height="15" fill="#fbbf24"/>
+  <text x="56" y="30" font-family="'Trebuchet MS', sans-serif" font-size="18" font-weight="900" letter-spacing="1.5" fill="#f8fafc">AFTER</text>
+  <text x="56" y="45" font-family="'Trebuchet MS', sans-serif" font-size="14" font-weight="900" letter-spacing="2" fill="#f59e0b">GROUND</text>
+</svg>

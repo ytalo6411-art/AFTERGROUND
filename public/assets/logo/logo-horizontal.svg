@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 72" width="420" height="72" role="img" aria-label="AFTERGROUND Horizontal Logo">
+  <defs>
+    <linearGradient id="hAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="hSteel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(4, 4) scale(0.5)">
+    <polygon points="64,3 119,32.5 119,95.5 64,125 9,95.5 9,32.5" fill="#0f172a" stroke="url(#hAmber)" stroke-width="5"/>
+    <polygon points="52,62 52,22 64,12 76,22 76,62" fill="#e2e8f0"/>
+    <rect x="34" y="36" width="14" height="26" fill="#64748b"/>
+    <rect x="80" y="36" width="14" height="26" fill="#64748b"/>
+    <rect x="12" y="61" width="104" height="8" fill="#4ade80"/>
+    <polygon points="12,69 116,69 116,94 64,122 12,94" fill="#78350f"/>
+    <rect x="58" y="62" width="12" height="50" fill="#090d16" stroke="#fbbf24" stroke-width="2"/>
+    <circle cx="64" cy="108" r="7" fill="#fbbf24"/>
+  </g>
+
+  <text x="76" y="41" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="30" font-weight="900" letter-spacing="2.5" fill="url(#hSteel)">AFTER</text>
+  <text x="184" y="41" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="30" font-weight="900" letter-spacing="2.5" fill="url(#hAmber)">GROUND</text>
+  <rect x="76" y="47" width="268" height="2.5" fill="#4ade80"/>
+  <text x="77" y="62" fill="#94a3b8" font-family="'Courier New', monospace" font-size="10.5" font-weight="700" letter-spacing="3.6">REBUILD WHAT REMAINS</text>
+</svg>

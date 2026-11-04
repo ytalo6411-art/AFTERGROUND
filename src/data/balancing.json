@@ -1,0 +1,73 @@
+{
+  "difficulties": {
+    "easy": {
+      "id": "easy",
+      "name": { "pt-BR": "Fácil (Reconstrução Assistida)", "en-US": "Easy (Assisted Rebuild)" },
+      "resourceMultiplier": 1.4,
+      "productionMultiplier": 1.25,
+      "consumptionMultiplier": 0.75,
+      "eventFrequencyMultiplier": 0.7,
+      "happinessBonus": 10
+    },
+    "normal": {
+      "id": "normal",
+      "name": { "pt-BR": "Normal (Padrão Aegis)", "en-US": "Normal (Aegis Standard)" },
+      "resourceMultiplier": 1.0,
+      "productionMultiplier": 1.0,
+      "consumptionMultiplier": 1.0,
+      "eventFrequencyMultiplier": 1.0,
+      "happinessBonus": 0
+    },
+    "hard": {
+      "id": "hard",
+      "name": { "pt-BR": "Difícil (Inverno de Cinzas)", "en-US": "Hard (Ash Winter)" },
+      "resourceMultiplier": 0.75,
+      "productionMultiplier": 0.88,
+      "consumptionMultiplier": 1.22,
+      "eventFrequencyMultiplier": 1.35,
+      "happinessBonus": -8
+    }
+  },
+  "world": {
+    "defaultWidth": 200,
+    "defaultHeight": 100,
+    "tileSize": 24,
+    "chunkSize": 16,
+    "surfaceBaseY": 22,
+    "shallowMaxY": 48,
+    "midMaxY": 74,
+    "deepMaxY": 98,
+    "dayDurationSeconds": 90
+  },
+  "citizens": {
+    "initialCount": 8,
+    "foodPerCitizenPerCycle": 0.22,
+    "waterPerCitizenPerCycle": 0.25,
+    "hungerIncreasePerSec": 0.45,
+    "thirstIncreasePerSec": 0.55,
+    "energyDrainWorkPerSec": 0.42,
+    "energyRecoverRestPerSec": 1.35,
+    "starvationHealthLossPerSec": 0.8,
+    "dehydrationHealthLossPerSec": 1.1,
+    "immigrationCheckIntervalSec": 35,
+    "minHappinessForImmigration": 52
+  },
+  "terrain": {
+    "0": { "key": "AIR", "name": { "pt-BR": "Ar", "en-US": "Air" }, "hardness": 0, "walkable": false, "solid": false },
+    "1": { "key": "TUNNEL", "name": { "pt-BR": "Túnel Escavado", "en-US": "Excavated Tunnel" }, "hardness": 0, "walkable": true, "solid": false },
+    "2": { "key": "GRASS", "name": { "pt-BR": "Solo Superficial", "en-US": "Surface Soil" }, "hardness": 18, "walkable": false, "solid": true, "yield": { "stone": 1, "wood": 1 } },
+    "3": { "key": "DIRT", "name": { "pt-BR": "Terra Compacta", "en-US": "Packed Dirt" }, "hardness": 22, "walkable": false, "solid": true, "yield": { "stone": 1 } },
+    "4": { "key": "SAND", "name": { "pt-BR": "Areia Sedimentar", "en-US": "Sedimentary Sand" }, "hardness": 15, "walkable": false, "solid": true, "yield": { "stone": 1 } },
+    "5": { "key": "STONE", "name": { "pt-BR": "Rocha Calcária", "en-US": "Limestone Rock" }, "hardness": 42, "walkable": false, "solid": true, "yield": { "stone": 3 } },
+    "6": { "key": "HARD_ROCK", "name": { "pt-BR": "Basalto Profundo", "en-US": "Deep Basalt" }, "hardness": 85, "walkable": false, "solid": true, "requiresTech": "deep_drilling", "yield": { "stone": 4, "metal": 1 } },
+    "7": { "key": "ORE_METAL", "name": { "pt-BR": "Veio de Minério Metálico", "en-US": "Metallic Ore Vein" }, "hardness": 55, "walkable": false, "solid": true, "yield": { "metal": 4, "stone": 2 } },
+    "8": { "key": "ORE_FUEL", "name": { "pt-BR": "Bolsão de Xisto Combustível", "en-US": "Shale Fuel Pocket" }, "hardness": 50, "walkable": false, "solid": true, "yield": { "fuel": 4, "stone": 1 } },
+    "9": { "key": "ORE_RARE", "name": { "pt-BR": "Cristal Quântico Aegis", "en-US": "Aegis Quantum Crystal" }, "hardness": 75, "walkable": false, "solid": true, "yield": { "science": 6, "parts": 2, "metal": 2 } },
+    "10": { "key": "WATER", "name": { "pt-BR": "Reserva de Água", "en-US": "Water Reservoir" }, "hardness": 12, "walkable": false, "solid": false, "yield": { "water": 6 } },
+    "11": { "key": "CAVE", "name": { "pt-BR": "Caverna Natural", "en-US": "Natural Cavern" }, "hardness": 0, "walkable": true, "solid": false },
+    "12": { "key": "RUIN", "name": { "pt-BR": "Ruína da Antiga Civilização", "en-US": "Ancient Civilization Ruin" }, "hardness": 60, "walkable": false, "solid": true, "yield": { "science": 10, "parts": 4, "metal": 5, "money": 35 } },
+    "13": { "key": "VEGETATION", "name": { "pt-BR": "Flora da Superfície", "en-US": "Surface Flora" }, "hardness": 14, "walkable": true, "solid": false, "yield": { "wood": 5, "food": 2 } },
+    "14": { "key": "CONTAMINATED", "name": { "pt-BR": "Solo Contaminado", "en-US": "Contaminated Soil" }, "hardness": 65, "walkable": false, "solid": true, "requiresTech": "bio_decontamination", "yield": { "fuel": 3, "science": 3 } },
+    "15": { "key": "BEDROCK", "name": { "pt-BR": "Rocha Matriz", "en-US": "Bedrock" }, "hardness": 99999, "walkable": false, "solid": true }
+  }
+}

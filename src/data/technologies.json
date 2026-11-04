@@ -1,0 +1,291 @@
+{
+  "eras": [
+    { "id": 1, "name": { "pt-BR": "Era I — Sobrevivência", "en-US": "Era I — Survival" } },
+    { "id": 2, "name": { "pt-BR": "Era II — Reconstrução", "en-US": "Era II — Reconstruction" } },
+    { "id": 3, "name": { "pt-BR": "Era III — Industrialização", "en-US": "Era III — Industrialization" } },
+    { "id": 4, "name": { "pt-BR": "Era IV — Tecnologia Avançada", "en-US": "Era IV — Advanced Technology" } },
+    { "id": 5, "name": { "pt-BR": "Era V — Nova Civilização", "en-US": "Era V — New Civilization" } }
+  ],
+  "technologies": [
+    {
+      "id": "basic_filtration",
+      "era": 1,
+      "name": { "pt-BR": "Purificação Osmótica", "en-US": "Osmotic Purification" },
+      "description": {
+        "pt-BR": "Membranas filtrantes para descontaminar lençóis freáticos e estocar água com segurança.",
+        "en-US": "Filter membranes to decontaminate groundwater and store water safely."
+      },
+      "cost": 25,
+      "duration": 18,
+      "prerequisites": [],
+      "unlocksBuildings": ["water_purifier", "water_tank"],
+      "effects": { "waterProductionBonus": 0.15 }
+    },
+    {
+      "id": "subterranean_ag",
+      "era": 1,
+      "name": { "pt-BR": "Hidroponia Subterrânea", "en-US": "Subterranean Hydroponics" },
+      "description": {
+        "pt-BR": "Cultivo controlado por espectros UV que multiplica a produção de alimentos em espaços fechados.",
+        "en-US": "UV-spectrum controlled cultivation multiplying food production indoors."
+      },
+      "cost": 30,
+      "duration": 20,
+      "prerequisites": [],
+      "unlocksBuildings": ["hydroponic_farm"],
+      "effects": { "foodProductionBonus": 0.15 }
+    },
+    {
+      "id": "reinforced_excavation",
+      "era": 1,
+      "name": { "pt-BR": "Escavação & Escoramento", "en-US": "Reinforced Excavation" },
+      "description": {
+        "pt-BR": "Brocas pneumáticas e vigas de escoramento que aceleram a escavação em +35% e habilitam perfuratrizes.",
+        "en-US": "Pneumatic drills and shoring beams that speed up excavation by +35% and enable mining rigs."
+      },
+      "cost": 30,
+      "duration": 20,
+      "prerequisites": [],
+      "unlocksBuildings": ["mining_rig"],
+      "effects": { "excavationSpeedBonus": 0.35 }
+    },
+    {
+      "id": "primary_grid",
+      "era": 1,
+      "name": { "pt-BR": "Rede Elétrica & Fotovoltaica", "en-US": "Primary Power & Solar Grid" },
+      "description": {
+        "pt-BR": "Células solares recuperadas e dutos integrados de distribuição elétrica e hidráulica.",
+        "en-US": "Recovered solar cells and integrated power and water distribution conduits."
+      },
+      "cost": 35,
+      "duration": 22,
+      "prerequisites": [],
+      "unlocksBuildings": ["solar_array", "utility_conduit"],
+      "effects": { "energyProductionBonus": 0.15 }
+    },
+    {
+      "id": "blast_metallurgy",
+      "era": 2,
+      "name": { "pt-BR": "Metalurgia de Alto-Forno", "en-US": "Blast Furnace Metallurgy" },
+      "description": {
+        "pt-BR": "Fornos de indução térmica capazes de fundir rocha mineralizada em ligas de aço estrutural.",
+        "en-US": "Thermal induction furnaces capable of smelting mineralized rock into structural steel."
+      },
+      "cost": 55,
+      "duration": 28,
+      "prerequisites": ["reinforced_excavation"],
+      "unlocksBuildings": ["smelting_foundry"],
+      "effects": { "metalProductionBonus": 0.2 }
+    },
+    {
+      "id": "field_medicine",
+      "era": 2,
+      "name": { "pt-BR": "Medicina de Campanha", "en-US": "Field Medicine" },
+      "description": {
+        "pt-BR": "Síntese de antibióticos fúngicos e protocolos clínicos para tratar doenças no subsolo.",
+        "en-US": "Fungal antibiotic synthesis and clinical protocols to treat underground illnesses."
+      },
+      "cost": 50,
+      "duration": 26,
+      "prerequisites": ["basic_filtration"],
+      "unlocksBuildings": ["medical_bay"],
+      "effects": { "healthRecoveryBonus": 0.25 }
+    },
+    {
+      "id": "modular_architecture",
+      "era": 2,
+      "name": { "pt-BR": "Arquitetura Modular Subterrânea", "en-US": "Modular Subterranean Architecture" },
+      "description": {
+        "pt-BR": "Estruturas pré-moldadas de concreto e aço para residências subterrâneas de maior capacidade.",
+        "en-US": "Pre-cast concrete and steel structures for higher-capacity underground quarters."
+      },
+      "cost": 55,
+      "duration": 26,
+      "prerequisites": ["subterranean_ag"],
+      "unlocksBuildings": ["bunker_quarters"],
+      "effects": { "buildSpeedBonus": 0.25 }
+    },
+    {
+      "id": "logistics_commerce",
+      "era": 2,
+      "name": { "pt-BR": "Rádio-Farol & Rotas de Caravanas", "en-US": "Radio Beacon & Caravan Routes" },
+      "description": {
+        "pt-BR": "Estabelece contato via rádio com outros enclaves, liberando o Entreposto Comercial e rotas mercantes.",
+        "en-US": "Establishes radio contact with other enclaves, unlocking the Trade Outpost and merchant routes."
+      },
+      "cost": 60,
+      "duration": 28,
+      "prerequisites": ["primary_grid"],
+      "unlocksBuildings": ["trade_outpost"],
+      "effects": { "tradeBonus": 0.15 }
+    },
+    {
+      "id": "petro_refining",
+      "era": 3,
+      "name": { "pt-BR": "Refino Petroquímico & Xisto", "en-US": "Petrochemical & Shale Refining" },
+      "description": {
+        "pt-BR": "Destilação catalítica de hidrocarbonetos subterrâneos para produção contínua de Combustível.",
+        "en-US": "Catalytic distillation of underground hydrocarbons for steady Fuel production."
+      },
+      "cost": 90,
+      "duration": 34,
+      "prerequisites": ["blast_metallurgy"],
+      "unlocksBuildings": ["fuel_refinery"],
+      "effects": { "fuelProductionBonus": 0.2 }
+    },
+    {
+      "id": "parts_automation",
+      "era": 3,
+      "name": { "pt-BR": "Manufatura de Peças de Precisão", "en-US": "Precision Parts Manufacturing" },
+      "description": {
+        "pt-BR": "Tornos CNC e prensas automatizadas para fabricar Peças Industriais na própria colônia.",
+        "en-US": "CNC lathes and automated presses to manufacture Industrial Parts in the colony."
+      },
+      "cost": 100,
+      "duration": 36,
+      "prerequisites": ["blast_metallurgy", "logistics_commerce"],
+      "unlocksBuildings": ["parts_fabricator"],
+      "effects": { "partsProductionBonus": 0.2 }
+    },
+    {
+      "id": "deep_drilling",
+      "era": 3,
+      "name": { "pt-BR": "Perfuração de Basalto Profundo", "en-US": "Deep Basalt Drilling" },
+      "description": {
+        "pt-BR": "Brocas de plasma e carbeto de tungstênio capazes de escavar Rocha Dura nas camadas profundas.",
+        "en-US": "Plasma and tungsten-carbide drills capable of excavating Hard Rock in deep layers."
+      },
+      "cost": 95,
+      "duration": 34,
+      "prerequisites": ["blast_metallurgy"],
+      "unlocksBuildings": [],
+      "effects": { "unlockHardRock": true, "excavationSpeedBonus": 0.4 }
+    },
+    {
+      "id": "technical_education",
+      "era": 3,
+      "name": { "pt-BR": "Educação Técnica Padronizada", "en-US": "Standardized Technical Education" },
+      "description": {
+        "pt-BR": "Preserva o conhecimento científico para a nova geração e eleva a produtividade de toda a colônia.",
+        "en-US": "Preserves scientific knowledge for the new generation and raises colony-wide productivity."
+      },
+      "cost": 85,
+      "duration": 32,
+      "prerequisites": ["field_medicine", "modular_architecture"],
+      "unlocksBuildings": ["technical_academy"],
+      "effects": { "globalProductionBonus": 0.12 }
+    },
+    {
+      "id": "geothermal_power",
+      "era": 4,
+      "name": { "pt-BR": "Termodinâmica Geotérmica", "en-US": "Geothermal Thermodynamics" },
+      "description": {
+        "pt-BR": "Turbinas de vapor supercrítico instaladas no subsolo profundo para geração limpa e inesgotável.",
+        "en-US": "Supercritical steam turbines installed in the deep underground for clean power."
+      },
+      "cost": 140,
+      "duration": 42,
+      "prerequisites": ["petro_refining", "deep_drilling"],
+      "unlocksBuildings": ["geothermal_plant"],
+      "effects": { "energyProductionBonus": 0.25 }
+    },
+    {
+      "id": "bio_decontamination",
+      "era": 4,
+      "name": { "pt-BR": "Bio-Descontaminação & Quarentena", "en-US": "Bio-Decontamination & Cleanse" },
+      "description": {
+        "pt-BR": "Permite escavar e neutralizar terrenos contaminados, além de construir clínicas avançadas.",
+        "en-US": "Allows excavating and neutralizing contaminated soil and building advanced clinics."
+      },
+      "cost": 135,
+      "duration": 40,
+      "prerequisites": ["technical_education"],
+      "unlocksBuildings": ["bio_cleanse_clinic"],
+      "effects": { "unlockContaminated": true, "healthRecoveryBonus": 0.3 }
+    },
+    {
+      "id": "transit_elevators",
+      "era": 4,
+      "name": { "pt-BR": "Elevadores de Eixo Magnético", "en-US": "Magnetic Shaft Elevators" },
+      "description": {
+        "pt-BR": "Transporte vertical de alta velocidade conectando a superfície às galerias profundas.",
+        "en-US": "High-speed vertical transport connecting the surface to deep galleries."
+      },
+      "cost": 125,
+      "duration": 38,
+      "prerequisites": ["parts_automation"],
+      "unlocksBuildings": ["elevator_shaft"],
+      "effects": { "citizenSpeedBonus": 0.25 }
+    },
+    {
+      "id": "deep_sensors",
+      "era": 4,
+      "name": { "pt-BR": "Computação Neural & Sensores", "en-US": "Neural Computing & Deep Sensors" },
+      "description": {
+        "pt-BR": "Expande o alcance de visão no subsolo, aumenta o sucesso de expedições e libera o Instituto de Dados.",
+        "en-US": "Expands underground vision range, boosts expedition success and unlocks the Data Institute."
+      },
+      "cost": 150,
+      "duration": 42,
+      "prerequisites": ["parts_automation", "technical_education"],
+      "unlocksBuildings": ["data_institute"],
+      "effects": { "scienceProductionBonus": 0.25, "expeditionSuccessBonus": 0.15 }
+    },
+    {
+      "id": "synthetic_agro_domes",
+      "era": 5,
+      "name": { "pt-BR": "Ecossistemas Agrícolas Sintéticos", "en-US": "Synthetic Agricultural Ecosystems" },
+      "description": {
+        "pt-BR": "Domos autossustentáveis que recriam a biosfera terrestre e garantem fartura alimentar.",
+        "en-US": "Self-sustaining domes recreating Earth's biosphere and guaranteeing food abundance."
+      },
+      "cost": 210,
+      "duration": 50,
+      "prerequisites": ["bio_decontamination"],
+      "unlocksBuildings": ["synthetic_agro_dome"],
+      "effects": { "foodProductionBonus": 0.3 }
+    },
+    {
+      "id": "residential_domes",
+      "era": 5,
+      "name": { "pt-BR": "Cidades-Domo Pressurizadas", "en-US": "Pressurized Dome Cities" },
+      "description": {
+        "pt-BR": "Arquitetura luminosa de larga escala para abrigar uma civilização próspera e feliz.",
+        "en-US": "Large-scale luminous architecture to house a prosperous and happy civilization."
+      },
+      "cost": 220,
+      "duration": 50,
+      "prerequisites": ["transit_elevators", "bio_decontamination"],
+      "unlocksBuildings": ["bio_habitat_dome"],
+      "effects": { "happinessFlatBonus": 10 }
+    },
+    {
+      "id": "automated_defense",
+      "era": 5,
+      "name": { "pt-BR": "Escudo & Defesa Sentinela Aegis", "en-US": "Aegis Sentinel Defense Shield" },
+      "description": {
+        "pt-BR": "Torres automatizadas de pulso e barreiras meteorológicas que protegem a colônia de qualquer ameaça.",
+        "en-US": "Automated pulse turrets and weather barriers protecting the colony from any threat."
+      },
+      "cost": 200,
+      "duration": 46,
+      "prerequisites": ["geothermal_power", "transit_elevators"],
+      "unlocksBuildings": ["sentinel_turret"],
+      "effects": { "colonyDefenseBonus": 30 }
+    },
+    {
+      "id": "surface_renaissance",
+      "era": 5,
+      "name": { "pt-BR": "Projeto Renascimento da Superfície", "en-US": "Project Surface Renaissance" },
+      "description": {
+        "pt-BR": "O ápice tecnológico do AFTERGROUND: estabilização atmosférica regional e fundação da Nova Civilização.",
+        "en-US": "The technological apex of AFTERGROUND: regional atmospheric stabilization and founding of the New Civilization."
+      },
+      "cost": 300,
+      "duration": 60,
+      "prerequisites": ["synthetic_agro_domes", "residential_domes", "deep_sensors"],
+      "unlocksBuildings": [],
+      "effects": { "globalProductionBonus": 0.25, "happinessFlatBonus": 15, "victoryMilestone": true }
+    }
+  ]
+}
